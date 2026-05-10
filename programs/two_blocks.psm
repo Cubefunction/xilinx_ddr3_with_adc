@@ -1,0 +1,10 @@
+; two_blocks.psm
+; Two back-to-back capture blocks of different sizes,
+; with a 10-cycle NOP gap between them.
+; Total real samples: 40 + 24 = 64
+; Total written:      ceil(64 / 64) * 128 bytes = 128 bytes (1 TX, no padding)
+
+SAM 40
+NOP 10
+SAM 24
+END

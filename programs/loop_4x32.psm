@@ -1,0 +1,10 @@
+; loop_4x32.psm
+; Four rounds of "SAM 32" via JMP -- 128 samples total.
+; JMP <label> <count>:  count = how many times JMP fires before falling through.
+;   count = 3  ->  body runs 4 times  (initial + 3 reentries)
+;   count = 0  ->  loop forever (will never fall through to END)
+
+loop:
+    SAM 32
+    JMP loop, 3
+    END

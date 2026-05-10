@@ -1,0 +1,7 @@
+; single_64.psm
+; Sample 64 ADC values once and stop.
+; Same as the TB's run_adc_test(64).
+
+NOP 3       ; small delay so the writer is settled
+SAM 64      ; capture 64 samples
+END
